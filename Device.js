@@ -4,8 +4,8 @@ class Device {
         this.electrical = 'electrical';
         this.turn = false;
     }
-    turnOnOff(turn) {
-        if (turn === 'On') {
+    turnOnOff(action) {
+        if (action) {
             console.log(this.deviceName + ' On');
             this.turn = true;
         } else {
