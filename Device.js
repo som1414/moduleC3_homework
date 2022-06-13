@@ -15,27 +15,22 @@ class Device {
     }
 }
 
-class LightingDevice {
+class LightingDevice extends Device {
     constructor(deviceName, power, type) {
-        this.deviceName = deviceName;
-        this.power = power;
+        super(deviceName, power);
         this.turn = true;
         this.type = type;
     }
 }
 
-class Gadjet {
+class Gadjet extends Device {
     constructor(deviceName, processor, type) {
-        this.deviceName = deviceName;
+        super(deviceName);
         this.processor = processor;
         this.turn = false;
         this.type = type;
     }
 }
-
-LightingDevice.prototype = new Device();
-
-Gadjet.prototype = new Device();
 
 const lamp = new LightingDevice('Luminaire', '100 Vt', 'LED');
 const computer = new Gadjet('HomePC', 'i7', 'Desktop');
